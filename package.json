@@ -1,0 +1,21 @@
+{
+  "name": "custom-events-serialisation",
+  "version": "1.0.0",
+  "description": "Demonstrates that CustomEvents do not affect scopes nor serialises transmitted data.",
+  "main": "mfe.js",
+  "scripts": {
+    "start": "npx concurrently 'npm:container' 'npm:mfe'",
+    "container": "npx http-server -p 8000",
+    "mfe": "npx http-server -p 9200"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/houston-rocket/custom-events-serialisation.git"
+  },
+  "author": "Sergio Martino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/houston-rocket/custom-events-serialisation/issues"
+  },
+  "homepage": "https://github.com/houston-rocket/custom-events-serialisation#readme"
+}
