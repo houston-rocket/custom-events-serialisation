@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <pre id="r"></pre>
+        <script>
+            const pre = document.querySelector('pre');
+            const dispatcher = (detail) => dispatchEvent(new CustomEvent('mfe', { detail }));
+            
+            addEventListener('mfe', ev => pre.textContent = ev.detail.getMfeText());
+
+            const s = document.createElement('script');
+            s.src = 'http://localhost:9200/mfe.js';
+            s.onload = () => mfe.bootstrap(dispatcher);
+            document.body.appendChild(s);
+        </script>
+    </body>
+</html>
