@@ -3,10 +3,14 @@ mfe = {};
 const scopedValue = 'Mfe';
 
 class MyTypedMfeClass {
-    #value = `hello from ${scopedValue}`;
+    #greeting = 'hello from';
+
+    #getScopedValue() {
+        return scopedValue;
+    }
 
     getMfeText() {
-        return this.#value;
+        return `${this.#greeting} ${this.#getScopedValue()}`;
     }
 }
 
